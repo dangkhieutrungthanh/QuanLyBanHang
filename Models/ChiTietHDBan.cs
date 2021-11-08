@@ -27,7 +27,7 @@ namespace QuanLyBanHang.Models
 
        
         [Required] 
-        public double GiamHia { get; set; }
+        public double GiamGia { get; set; }
 
         
         [Required]

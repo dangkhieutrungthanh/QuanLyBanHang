@@ -24,7 +24,7 @@ namespace QuanLyBanHang.Migrations
                         MaHang = c.String(nullable: false, maxLength: 50),
                         SoLuong = c.Double(nullable: false),
                         DonGia = c.Double(nullable: false),
-                        GiamHia = c.Double(nullable: false),
+                        GiamGia = c.Double(nullable: false),
                         ThanhTien = c.Double(nullable: false),
                     })
                 .PrimaryKey(t => t.MaHDBan);

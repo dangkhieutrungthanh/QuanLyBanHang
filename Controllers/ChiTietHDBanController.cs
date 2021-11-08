@@ -46,7 +46,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaHDBan,MaHang,SoLuong,DonGia,GiamHia,ThanhTien")] ChiTietHDBan chiTietHDBan)
+        public ActionResult Create([Bind(Include = "MaHDBan,MaHang,SoLuong,DonGia,GiamGia,ThanhTien")] ChiTietHDBan chiTietHDBan)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaHDBan,MaHang,SoLuong,DonGia,GiamHia,ThanhTien")] ChiTietHDBan chiTietHDBan)
+        public ActionResult Edit([Bind(Include = "MaHDBan,MaHang,SoLuong,DonGia,GiamGia,ThanhTien")] ChiTietHDBan chiTietHDBan)
         {
             if (ModelState.IsValid)
             {
