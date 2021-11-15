@@ -12,18 +12,16 @@ namespace QuanLyBanHang.Models
         {
         }
 
-        public virtual DbSet<ChatLieu> ChatLieus { get; set; }
-        public virtual DbSet<Hang> Hangs { get; set; }
-        public virtual DbSet<HDBan> HDBans { get; set; }
-        public virtual DbSet<Khach> Khachs { get; set; }
+        public virtual DbSet<LoaiSP> LoaiSPs { get; set; }
+        public virtual DbSet<SanPham> SanPhams { get; set; }
+        public virtual DbSet<HoaDon> HoaDons { get; set; }
+        public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
-        public virtual DbSet<ChiTietHDBan> ChiTietHDBans { get; set; }
+        public virtual DbSet<CTHD> CTHDs { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Hang>()
-                .Property(e => e.GhiChu)
-                .IsFixedLength();
+            
         }
     }
 }

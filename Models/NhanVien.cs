@@ -1,4 +1,4 @@
-namespace QuanLyBanHang.Models
+﻿namespace QuanLyBanHang.Models
 {
     using System;
     using System.Collections.Generic;
@@ -11,16 +11,15 @@ namespace QuanLyBanHang.Models
     {
         [Key]
         [StringLength(50)]
-        public string MaNhanVien { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string TenNhanVien { get; set; }
-
+        public string MaNV { get; set; }
         [Required]
         [StringLength(10)]
-        public string GioiTinh { get; set; }
-
+        [Display(Name = "Họ")]
+        public string HoNV { get; set; }
+        [Required]
+        [StringLength(10)]
+        [Display(Name ="Tên")]
+        public string TenNV { get; set; }
         [Required]
         [StringLength(50)]
         public string DiaChi { get; set; }
@@ -28,7 +27,5 @@ namespace QuanLyBanHang.Models
         [Required]
         [StringLength(15)]
         public string DienThoai { get; set; }
-
-        public DateTime? NgaySinh { get; set; }
     }
 }
