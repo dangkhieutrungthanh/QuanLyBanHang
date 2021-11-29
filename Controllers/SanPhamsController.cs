@@ -9,9 +9,10 @@ using System.Web.Mvc;
 using QuanLyBanHang.Models;
 
 namespace QuanLyBanHang.Controllers
-{
+{[Authorize]
     public class SanPhamsController : Controller
     {
+        
         private Db db = new Db();
         public StringProcess strPro = new StringProcess();
 

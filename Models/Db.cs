@@ -18,6 +18,7 @@ namespace QuanLyBanHang.Models
         public virtual DbSet<KhachHang> KhachHangs { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<CTHD> CTHDs { get; set; }
+        public virtual DbSet<Account> Accounts { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

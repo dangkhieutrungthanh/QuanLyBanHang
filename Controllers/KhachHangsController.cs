@@ -10,6 +10,7 @@ using QuanLyBanHang.Models;
 
 namespace QuanLyBanHang.Controllers
 {
+    [Authorize]
     public class KhachHangsController : Controller
     {
         private Db db = new Db();

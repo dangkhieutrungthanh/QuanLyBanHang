@@ -128,6 +128,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CTHDsController.cs" />
     <Compile Include="Controllers\HoaDonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -142,7 +143,13 @@
     <Compile Include="Migrations\202111151151061_Create_Table.Designer.cs">
       <DependentUpon>202111151151061_Create_Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111291033480_Create_Table_1.cs" />
+    <Compile Include="Migrations\202111291033480_Create_Table_1.Designer.cs">
+      <DependentUpon>202111291033480_Create_Table_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Encrytion.cs" />
     <Compile Include="Models\LoaiSP.cs" />
     <Compile Include="Models\CTHD.cs" />
     <Compile Include="Models\Db.cs" />
@@ -219,6 +226,8 @@
     <Content Include="Views\SanPhams\Details.cshtml" />
     <Content Include="Views\SanPhams\Edit.cshtml" />
     <Content Include="Views\SanPhams\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -239,6 +248,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202111151151061_Create_Table.resx">
       <DependentUpon>202111151151061_Create_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111291033480_Create_Table_1.resx">
+      <DependentUpon>202111291033480_Create_Table_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
