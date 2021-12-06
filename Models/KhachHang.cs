@@ -1,4 +1,4 @@
-namespace QuanLyBanHang.Models
+﻿namespace QuanLyBanHang.Models
 {
     using System;
     using System.Collections.Generic;
@@ -10,17 +10,18 @@ namespace QuanLyBanHang.Models
     public partial class KhachHang
     {
         [Key]
-        [StringLength(10)]
         public string MaKH { get; set; }
 
-        [Required]
-        [StringLength(50)]
+        [Required,Display(Name ="Tên khách hàng")]
         public string TenKH { get; set; }
 
-        [StringLength(50)]
+        [Required,MinLength(10)]
         public string DiaChi { get; set; }
-
-        [StringLength(20)]
+        [Required, MinLength(10)]
         public string DienThoai { get; set; }
+
+        public string Email { get; set; }
+
+        public ICollection<PXuat> PXuats { get; set; }
     }
 }

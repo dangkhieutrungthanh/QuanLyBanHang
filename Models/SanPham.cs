@@ -1,4 +1,4 @@
-namespace QuanLyBanHang.Models
+﻿namespace QuanLyBanHang.Models
 {
     using System;
     using System.Collections.Generic;
@@ -10,19 +10,15 @@ namespace QuanLyBanHang.Models
     public partial class SanPham
     {
         [Key]
-        [StringLength(10)]
         public string MaSP { get; set; }
 
         [Required]
-        [StringLength(50)]
         public string TenSP { get; set; }
-
+        public string DonViTinh { get; set; }
         public int SoLuong { get; set; }
-
-        public double DonGiaNhap { get; set; }
-
-        public double DonGiaBan { get; set; }
-        [StringLength(10)]
         public string MaLoaiSP { get; set; }
+        public LoaiSP LoaiSPs { get; set; }
+        public ICollection<CTPN> CTPNs { get; set; }
+        public ICollection<CTPX> CTPXs { get; set; }
     }
 }

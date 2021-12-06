@@ -51,7 +51,7 @@ namespace DangKhieuTrungThanh.Controllers
                 if (model == 1)
                 {
                     FormsAuthentication.SetAuthCookie(acc.UserName, true);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "LoaiSP");
                 }
                 else { ModelState.AddModelError("", "Thông tin đăng nhập sai lệnh"); }
             }
@@ -60,7 +60,7 @@ namespace DangKhieuTrungThanh.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "LoaiSP");
         }
     }
 }

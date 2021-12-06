@@ -1,0 +1,51 @@
+﻿@model QuanLyBanHang.Models.PNhap
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PNhap</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NCCs.TenNCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NCCs.TenNCC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhanViens.TenNV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanViens.TenNV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayLapHD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayLapHD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayGiaoHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayGiaoHang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPN }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

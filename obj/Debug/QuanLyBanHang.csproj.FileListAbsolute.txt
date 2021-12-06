@@ -80,7 +80,6 @@ C:\Users\KHIEU LOAN\source\repos\QuanLyBanHang\bin\Microsoft.CodeDom.Providers.D
 C:\Users\KHIEU LOAN\source\repos\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.CopyComplete
 C:\Users\KHIEU LOAN\source\repos\QuanLyBanHang\obj\Debug\QuanLyBanHang.dll
 C:\Users\KHIEU LOAN\source\repos\QuanLyBanHang\obj\Debug\QuanLyBanHang.pdb
-C:\Users\KHIEU LOAN\source\repos\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.AssemblyReference.cache
 C:\Users\KHIEU LOAN\source\repos\QuanLyBanHang\obj\Debug\QuanLyBanHang.Migrations.Create_Table.resources
 C:\Users\KHIEU LOAN\source\repos\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.GenerateResource.cache
-C:\Users\KHIEU LOAN\source\repos\QuanLyBanHang\obj\Debug\QuanLyBanHang.Migrations.Create_Table_1.resources
+C:\Users\KHIEU LOAN\source\repos\QuanLyBanHang\obj\Debug\QuanLyBanHang.csproj.AssemblyReference.cache

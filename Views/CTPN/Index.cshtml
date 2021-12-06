@@ -1,0 +1,52 @@
+﻿@model IEnumerable<QuanLyBanHang.Models.CTPN>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PNhaps.MaNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SanPhams.TenSP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PNhaps.MaNCC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanPhams.TenSP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonGia)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaCTPN }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaCTPN }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaCTPN })
+        </td>
+    </tr>
+}
+
+</table>

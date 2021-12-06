@@ -10,12 +10,12 @@
     public partial class LoaiSP
     {
         [Key]
-        [StringLength(10)]        
         public string MaLoaiSP { get; set; }
-
         [Required]
         [StringLength(50)]
-        [Display(Name ="Loại sản phẩm")]
+        [Display(Name = "Loại sản phẩm")]
         public string TenSP { get; set; }
+
+        public ICollection<SanPham> SanPhams { get; set; }
     }
 }
