@@ -9,15 +9,15 @@
     [Table("KhachHang")]
     public partial class KhachHang
     {
-        [Key]
+        [Key,Display(Name = "Mã khách hàng")]
         public string MaKH { get; set; }
 
         [Required,Display(Name ="Tên khách hàng")]
         public string TenKH { get; set; }
 
-        [Required,MinLength(10)]
+        [Required,MinLength(5), Display(Name = "Địa chỉ")]
         public string DiaChi { get; set; }
-        [Required, MinLength(10)]
+        [Required, MinLength(10),Display(Name = "Điện thoại")]
         public string DienThoai { get; set; }
 
         public string Email { get; set; }

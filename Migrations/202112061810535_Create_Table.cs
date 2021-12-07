@@ -77,12 +77,12 @@ namespace QuanLyBanHang.Migrations
                     {
                         MaSP = c.String(nullable: false, maxLength: 128),
                         TenSP = c.String(nullable: false),
-                        DonViTinh = c.String(),
+                        DonViTinh = c.String(nullable: false),
                         SoLuong = c.Int(nullable: false),
-                        MaLoaiSP = c.String(maxLength: 128),
+                        MaLoaiSP = c.String(nullable: false, maxLength: 128),
                     })
                 .PrimaryKey(t => t.MaSP)
-                .ForeignKey("dbo.LoaiSP", t => t.MaLoaiSP)
+                .ForeignKey("dbo.LoaiSP", t => t.MaLoaiSP, cascadeDelete: true)
                 .Index(t => t.MaLoaiSP);
             
             CreateTable(
@@ -134,7 +134,7 @@ namespace QuanLyBanHang.Migrations
                 c => new
                     {
                         MaLoaiSP = c.String(nullable: false, maxLength: 128),
-                        TenSP = c.String(nullable: false, maxLength: 50),
+                        TenLSP = c.String(nullable: false, maxLength: 50),
                     })
                 .PrimaryKey(t => t.MaLoaiSP);
             

@@ -41,10 +41,11 @@ namespace QuanLyBanHang.Controllers
         public ActionResult Create()
         {
             var model = db.NCCs.ToList();
-            if (model.Count == 0) ViewBag.id = "NCC001";
+            if (model.Count == 0)ViewBag.id = "NCC001";
             else
             {
-                var id = model.OrderByDescending(s => s.MaNCC).FirstOrDefault().MaNCC; ViewBag.id = strPro.AutoGennerateKey(id);
+                var id = model.OrderByDescending(s => s.MaNCC).FirstOrDefault().MaNCC;
+               ViewBag.id = strPro.AutoGennerateKey(id);
             }
 
             return View();

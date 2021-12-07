@@ -11,11 +11,8 @@
     {
         [Key]
         public string MaLoaiSP { get; set; }
-        [Required]
-        [StringLength(50)]
-        [Display(Name = "Loại sản phẩm")]
-        public string TenSP { get; set; }
-
+        [Required,Display(Name = "Loại sản phẩm")]
+        public string TenLSP { get; set; }
         public ICollection<SanPham> SanPhams { get; set; }
     }
 }

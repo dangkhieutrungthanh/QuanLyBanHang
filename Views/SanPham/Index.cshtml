@@ -1,17 +1,13 @@
 ﻿@model IEnumerable<QuanLyBanHang.Models.SanPham>
 
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<h2>Index</h2>
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiSPs.TenLSP)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.TenSP)
         </th>
@@ -21,14 +17,14 @@
         <th>
             @Html.DisplayNameFor(model => model.SoLuong)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.MaLoaiSP)
-        </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiSPs.TenLSP)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.TenSP)
         </td>
@@ -37,9 +33,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SoLuong)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MaLoaiSP)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.MaSP }) |

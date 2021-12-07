@@ -12,10 +12,13 @@
         [Key]
         public string MaSP { get; set; }
 
-        [Required]
+        [Required,Display(Name ="Tên sản phẩm")]
         public string TenSP { get; set; }
+        [Required,Display(Name = "Đơn vị tính")]
         public string DonViTinh { get; set; }
+        [Display(Name = "Số lượng")]
         public int SoLuong { get; set; }
+        [Required]
         public string MaLoaiSP { get; set; }
         public LoaiSP LoaiSPs { get; set; }
         public ICollection<CTPN> CTPNs { get; set; }

@@ -17,10 +17,10 @@
         [Required]
         public string MaSP { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Số lượng")]
         public int SoLuong { get; set; }
 
-        [Required,DataType(DataType.Currency)]
+        [Required,DataType(DataType.Currency), Display(Name = "Đơn giá")]
         public int DonGia { get; set; }
         public PXuat PXuats { get; set; }
         public SanPham SanPhams { get; set; }

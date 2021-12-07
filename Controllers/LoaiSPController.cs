@@ -9,14 +9,11 @@ using System.Web.Mvc;
 using QuanLyBanHang.Models;
 
 namespace QuanLyBanHang.Controllers
-{
-    [Authorize]
-
+{[Authorize]
     public class LoaiSPController : Controller
     {
         private Db db = new Db();
         StringProcess strPro = new StringProcess();
-
         // GET: LoaiSP
         public ActionResult Index()
         {
@@ -24,7 +21,7 @@ namespace QuanLyBanHang.Controllers
         }
 
         // GET: LoaiSP/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
@@ -39,23 +36,22 @@ namespace QuanLyBanHang.Controllers
         }
 
         // GET: LoaiSP/Create
-        public ActionResult Create()
-        {
-            var model = db.LoaiSPs.ToList();
-            if (model.Count == 0) ViewBag.id = "LSP001";
-            else
+            public ActionResult Create()
             {
-                var id = model.OrderByDescending(s => s.MaLoaiSP).FirstOrDefault().MaLoaiSP; ViewBag.id = strPro.AutoGennerateKey(id);
+                var model = db.LoaiSPs.ToList();
+                if (model.Count == 0) ViewBag.id = "LSP001";
+                else
+                {
+                    var id = model.OrderByDescending(s => s.MaLoaiSP).FirstOrDefault().MaLoaiSP; ViewBag.id = strPro.AutoGennerateKey(id);
+                }
+                return View();
             }
-            return View();
-        }
-
         // POST: LoaiSP/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaLoaiSP,TenSP")] LoaiSP loaiSP)
+        public ActionResult Create([Bind(Include = "MaLoaiSP,TenLSP")] LoaiSP loaiSP)
         {
             if (ModelState.IsValid)
             {
@@ -68,7 +64,7 @@ namespace QuanLyBanHang.Controllers
         }
 
         // GET: LoaiSP/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
@@ -87,7 +83,7 @@ namespace QuanLyBanHang.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaLoaiSP,TenSP")] LoaiSP loaiSP)
+        public ActionResult Edit([Bind(Include = "MaLoaiSP,TenLSP")] LoaiSP loaiSP)
         {
             if (ModelState.IsValid)
             {
@@ -99,7 +95,7 @@ namespace QuanLyBanHang.Controllers
         }
 
         // GET: LoaiSP/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -116,7 +112,7 @@ namespace QuanLyBanHang.Controllers
         // POST: LoaiSP/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             LoaiSP loaiSP = db.LoaiSPs.Find(id);
             db.LoaiSPs.Remove(loaiSP);

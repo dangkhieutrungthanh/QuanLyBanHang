@@ -9,15 +9,15 @@
     [Table("NCC")]
     public partial class NCC
     {
-        [Key]
+        [Key, Display(Name = "Mã nhà cung cấp")]
         public string MaNCC { get; set; }
 
         [Required, Display(Name = "Tên nhà cung cấp")]
         public string TenNCC { get; set; }
 
-        [Required, MinLength(10)]
+        [Required, MinLength(5), Display(Name = "Địa chỉ")]
         public string DiaChi { get; set; }
-        [Required, MinLength(10)]
+        [Required, MinLength(5), Display(Name = "Điện thoại")]
         public string DienThoai { get; set; }
 
         public string Email { get; set; }

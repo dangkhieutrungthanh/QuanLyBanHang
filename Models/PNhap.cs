@@ -18,10 +18,10 @@
         [Required]
         public string MaNV { get; set; }
 
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date), Display(Name = "Ngày lập HĐ")]
         public DateTime NgayLapHD { get; set; }
 
-        [DataType(DataType.Date)]
+        [DataType(DataType.Date), Display(Name = "Ngày giao hàng")]
         public DateTime NgayGiaoHang { get; set; }
 
         public NCC NCCs { get; set; }

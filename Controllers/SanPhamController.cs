@@ -40,8 +40,9 @@ namespace QuanLyBanHang.Controllers
         // GET: SanPham/Create
         public ActionResult Create()
         {
+            ViewBag.MaLoaiSP = new SelectList(db.LoaiSPs, "MaLoaiSP","TenLSP");
             var model = db.SanPhams.ToList();
-            if (model.Count == 0) ViewBag.id = "KH001";
+            if (model.Count == 0) ViewBag.id = "SP001";
             else
             {
                 var id = model.OrderByDescending(s => s.MaSP).FirstOrDefault().MaSP; ViewBag.id = strPro.AutoGennerateKey(id);

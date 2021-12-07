@@ -9,15 +9,15 @@
     [Table("NhanVien")]
     public partial class NhanVien
     {
-        [Key]
+        [Key, Display(Name = "Mã Nhân viên")]
         public string MaNV { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Tên Nhân viên")]
         public string TenNV { get; set; }
-        [Required]
+        [Required, Display(Name = "Địa chỉ")]
         public string DiaChi { get; set; }
 
-        [Required]
+        [Required, Display(Name = "Điện thoại")]
         public string DienThoai { get; set; }
     }
 }
